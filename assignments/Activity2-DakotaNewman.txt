@@ -1,0 +1,56 @@
+Part 1 
+1. 0 
+2. 256 + 16 + 4 = 276
+3. 64 + 32 + 8 + 4 + 2 = 110
+4. 8 + 16 + 128 = 152
+5. 128 + 64 + 32 + 16 + 8 + 4 + 2=254
+6. 16 + 32+ 128 = 176
+7. 4 + 128 + 64 +32= 228
+8. 128 + 32 + 8 + 2= 170
+9. 128 + 64 + 16 + 4 = 212
+10. 128 + 64 + 32 = 224
+11. 128 + 16 + 4 + 2 = 150
+12. 1024 + 256 + 64 + 32 + 16 + 4 = 1396
+13. 8192 + 4096 + 2048 + 1024 + 512 + 256 + 64 + 16 + 8 = 16216
+14. 32768 + 16384 + 4096 + 1024 + 128 + 32 + 8 + 4 + 2 = 54446
+
+Part 2 
+1. 11111111 = 128 + 64 + 32 + 16 + 8 + 4 + 2 + 1 = 255
+2. 1011010 = 2 + 8 + 16 + 64 = 90
+3. 101111 = 1 + 2 + 4 + 8 + 32 = 47
+4. 10000000000 = 1024 = 1024
+5. 1010100010 = 2 + 32 + 128 + 512 = 674
+6. 1111101000 = 8 + 32 + 64 + 128 + 256 + 512 = 1000
+7. 100000000000 = 2048 = 2048 
+8. 11011110000 = 16 + 32 + 64 + 128 + 512 + 1024 = 1776
+9. 11111100100 = 4 + 32 + 64 + 128 + 256 + 512 + 1024 = 2020
+
+Part 3 Psuedocode
+1. Converting Binary Numbers to Decimal Numbers
+starting from right to left, determine if the number is a 0 or 1 
+if the number is a zero
+skip that number
+if the number is a 1
+multiply 2 times itself by many number(s) you are from the end (the furthest right being 0)
+keep track of the results of the those multiplications
+add all of the results 
+that is your answer
+
+
+Converting decimal to binary 
+first multiply 2 times itself until the number that you get is higher than the number that you want to convert, keeping track of the results
+once you get to a number higher than the number you want to convert
+add up how many multiplications it took to get there - 1 (this will determine length of binary code)
+next take the results that you had gotten, starting with the largest number and add it to the next largest number
+if the result is not larger than your the number you want to convert then it will be kept
+store that new number
+if the result is larger than your number, the second to largest will not be used
+repeat the process with each new number until you have reached your desired number
+now that you know what numbers you used you can start writing your binary from right to left
+if you used the corresponding number with how many times it was multiplied by 2 with the right being 0 and counting up it will be a 1 and if you didn't it will be a 0
+
+
+
+
+
+
