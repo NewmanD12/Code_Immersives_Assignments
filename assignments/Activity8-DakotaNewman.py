@@ -10,6 +10,8 @@ def findMax(list):
 
 findMax(listOfNums)
 
+# Write a program to imitate a traffic light
+
 def trafficLight(String):
   if (String == "red"):
     print("You must stop!")
