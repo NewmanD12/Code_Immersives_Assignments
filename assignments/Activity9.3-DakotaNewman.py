@@ -10,7 +10,7 @@ def isSorted(list):
   count = 0
   for i in range(len(list)):
     if(list[i] < list[i + 1]):
-      print(list[i])
+      # print(list[i])
       count += 1
       if (count == len(list) -1):
         print("This list is sorted already")
