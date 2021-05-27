@@ -1,4 +1,5 @@
 import random
+import statistics
 
 # Activity 10.3 Create a function that plays rock paper scissors with you...
 # You are to ask to user for input
@@ -7,7 +8,7 @@ import random
 # If the user inputs 'Scissors' -> 'paper' will lose, and 'Rock' will win
 
 def rockPaperScissors():
-  userInput = input("Please take a guess ")
+  userInput = input("Please take a guess ").lower().replace(' ', '')
   computerPick = ""
   computerNum = random.randrange(1, 4)
 
@@ -33,14 +34,14 @@ def rockPaperScissors():
 
 # rockPaperScissors()
 
-
 def rockPaperScissors2():
   dictOfGuesses = {
     '1' : 'rock',
     '2' : 'paper',
     '3' : 'scissors'
   }
-  userInput = input('Input your guess ').lower()
+  userInput = input('Input your guess ').lower().replace(' ', '')
+  # print(userInput)
   computerNum = random.randrange(1, 4)
   computerNumToString = str(computerNum)
   computerGuess = dictOfGuesses[computerNumToString]
@@ -59,17 +60,8 @@ def rockPaperScissors2():
 
 # rockPaperScissors2()
 
-
-def iWin():
-    pick = input("Choose Rock, Paper, or Scissors")
-    pcPicks = ["Rock", "Paper", "Scissors"]
-    pcPick = random.choice(pcPicks)
-    print(pcPick)
-    return pcPick
-# iWin() 
-
 def rockPaperScissors3():
-  myGuess = input('Input your guess').lower()
+  myGuess = input('Input your guess ').lower().replace(' ', '')
   computerOptions = ['rock', 'paper', 'scissors']
   computerGuess = random.choice(computerOptions)
 
@@ -86,3 +78,5 @@ def rockPaperScissors3():
   # print(computerGuess)
 
 rockPaperScissors3()
+
+
