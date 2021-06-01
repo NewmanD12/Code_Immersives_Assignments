@@ -20,7 +20,7 @@ def standardDeviation(list):
       updatedList.append(updatedGrade)
     if(list[i] + deviation >= 100):
       updatedList.append(100)
-  print(updatedList)
+  # print(updatedList)
   return updatedList
 
 # standardDeviation(grades)
@@ -33,11 +33,60 @@ def standardDeviation(list):
 
 
 def findAverage(list):
-  average = statistics.mean(list)
+  average = statistics.mean(standardDeviation(list))
   print(average)
   return average
 
-# findAverage(standardDeviation(grades))
-findAverage(standardDeviation(grades2))
-findAverage(standardDeviation(grades3))
-# findAverage(standardDeviation(grades4))
+# findAverage(grades)
+# findAverage(grades2)
+# findAverage(grades3)
+# findAverage(grades4)
+
+
+# Activity 11.3
+# Create a function that given a list of numbers will return to me a list of booleans
+# Your function will take in a list of numbers, and if the values are less than 55 exclusive, then you substitue that list item with a "False". For all others, substitute the current list item value to "True".
+# Return to me that list, and before returning, check its type (it should be a list)
+
+
+randomList = [23, 55, 54, 75, 97, 48, 92, 83]
+
+
+def lessThan55(list):
+  for i in range(len(list)):
+    if(list[i] < 55):
+      list[i] = False
+    else: 
+      list[i] = True
+
+  print(list)
+  print(type(list))
+  return list
+
+
+# lessThan55(randomList)
+
+
+# Activity 11.4
+# now I would like to have a function that takes a list and tells me how many people passed the class
+# I would like you to do this with a given list of 'grades'
+# given a list of integers represeting exam grades(whether they are curved or not), print a message telling me how many people passed or failed the class base on the fact that 55+  is passing and below is failing. 
+
+# call the function "Class Report"
+
+
+# grades = [100, 85, 85, 75, 75, 75, 65, 65, 50, 50]
+
+def classReport(list):
+  passed = 0
+  failed = 0
+  for i in range(len(list)):
+    if(list[i] < 55):
+      failed += 1
+    elif(list[i] >= 55):
+      passed += 1
+  
+  print(f"{passed} is how many kids passed, {failed} is how many kids failed")
+
+# classReport(grades)
+# classReport(standardDeviation(grades))
